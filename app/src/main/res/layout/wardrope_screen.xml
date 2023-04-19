@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/text_view_title"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginTop="32dp"
+    android:text="Welcome to your wardrope, What are your plans today?"
+    android:fontFamily="@font/lato"
+    android:textStyle="bold"
+    android:textSize="20sp"
+    android:textColor="#078080"
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_weather_degree"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_title"
+        android:layout_marginTop="36dp"
+        android:layout_marginStart="30dp"
+        android:fontFamily="@font/lato"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="#DE232323"
+        tools:text="25"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_weather_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_weather_degree"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="30dp"
+        tools:text="Partly Sunny"
+        android:fontFamily="@font/lato"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#DE232323"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/image_view_location_icon"
+        android:src="@drawable/ic_location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_weather_status"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="30dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_city"
+        app:layout_constraintStart_toEndOf="@id/image_view_location_icon"
+        app:layout_constraintTop_toBottomOf="@id/text_view_weather_status"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        tools:text="Baghdad"
+        android:fontFamily="@font/lato"
+        android:textSize="12sp"
+        android:textColor="#DB232323"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/image_view_time_icon"
+        android:src="@drawable/ic_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_view_location_icon"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="30dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_time"
+        app:layout_constraintStart_toEndOf="@id/image_view_time_icon"
+        app:layout_constraintTop_toBottomOf="@id/text_view_city"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:text="Now"
+        android:fontFamily="@font/lato"
+        android:textSize="12sp"
+        android:textColor="#DB232323"
+        />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/image_view_weather_status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_title"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        tools:src="@drawable/cloudy_sun"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_check_your_outfit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_view_time_icon"
+        android:layout_marginTop="44dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:text="Check your outfit for today"
+        android:fontFamily="@font/lato"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#078080"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:id="@+id/image_view_suggested_outfit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_check_your_outfit"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="8dp"
+        tools:src="@drawable/outfit"
+        />
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:id="@+id/lottie_no_network"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:lottie_rawRes="@raw/nointernet"
+        android:visibility="invisible"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        />
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_no_network"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="image_view_suggested_outfit,text_view_check_your_outfit,image_view_weather_status,text_view_time,image_view_time_icon,text_view_city,image_view_location_icon,text_view_title,text_view_weather_degree,text_view_weather_status,"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

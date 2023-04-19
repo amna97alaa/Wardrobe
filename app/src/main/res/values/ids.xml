@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="text_view_weather_degree" type="id" />
+    <item name="text_view_weather_status" type="id" />
+    <item name="image_view_location_icon" type="id" />
+    <item name="text_view_city" type="id" />
+    <item name="image_view_time_icon" type="id" />
+    <item name="text_view_time" type="id" />
+    <item name="image_view_weather_status" type="id" />
+    <item name="text_view_check_your_outfit" type="id" />
+    <item name="image_view_suggested_outfit" type="id" />
+</resources>
